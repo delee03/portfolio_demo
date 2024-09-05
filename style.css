@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.heading {
+    padding: 50px 0;
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+}
+
+.heading h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.heading p {
+    font-style: 20px;
+    margin-top: 20px;
+}
+
+.nav-item .nav-link.active {
+    color: rgb(9, 180, 9);
+    font-weight: 600;
+}
+
+.nav-link {
+    color: white;
+}
+
+header .nav-item:first-child::before {
+    opacity: 1;
+    width: 100%;
+}
+
+header .nav-item::before {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    top: 100%;
+    width: 0;
+    opacity: 0;
+    height: 3px;
+    background: rgb(9, 180, 9);
+    transition: all 0.4s;
+}
+
+header .nav-item:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+header .nav-item:hover .nav-link {
+    color: rgb(9, 180, 9);
+}
+
+/* carousel */
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39, 43, 54, 0.5);
+}
+
+.carousel-item .carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item .carousel-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.carousel-item .carousel-content h1 {
+    font-size: 60px;
+    font-weight: 400;
+}
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(18, 156, 18);
+}
+
+.project-content {
+    color: black;
+}
+
+.project-content .nav-item .nav-link.active {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.project-content .nav-item .nav-link {
+    color: black;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.project-content .tab-content .card {
+    border-radius: 20px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* animation-name: scalling;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    animation-delay: 2s; */
+}
+.project-content .tab-content .card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.project-content .tab-content .card .card-body {
+    padding: 30px 20px 50px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.4s;
+}
+
+.project-content .tab-content .card .card-body:hover {
+    border: 1px solid rgb(9, 180, 9);
+    border-top-right-radius: 0 !important;
+    border-top: none;
+    border-top-left-radius: 0 !important;
+    border-radius: 20px;
+}
+
+.project-content .tab-content .card .card-text:hover h4 {
+    color: rgb(9, 180, 9);
+}
+
+.feature .heading {
+    color: white;
+}
+
+.feature {
+    position: relative;
+    margin: 100px 0;
+    padding: 50px 0 120px;
+    background-image: url("./img/3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.feature .overplay {
+    position: absolute;
+    background: rgba(7, 10, 12, 0.72);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.feature_content .item {
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s;
+}
+
+.feature_content .item h4 {
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+.feature_content .item i {
+    font-size: 48px;
+    color: rgb(8, 193, 8);
+}
+
+.feature_content .item:hover {
+    background: rgba(0, 0, 0, 1);
+    border: 1px solid #fff;
+}
+
+/* achievement */
+
+.achievement p {
+    color: #585858;
+}
+
+.left-achieve {
+    border-radius: 15px;
+    width: 35%;
+    margin-right: 50px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.achievement {
+    position: relative;
+    padding: 50px 0;
+}
+
+.achievement::before {
+    background-position: bottom left;
+    content: "";
+    background-image: url(./img/memphis_3.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+footer {
+    padding: 70px 0;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.top-footer i {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+    line-height: 35px;
+    border: 1px solid #fff;
+}
+
+.top-footer {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #888;
+}
+
+@keyframes scalling {
+    0% {
+        scale: 0;
+    }
+    50% {
+        scale: 1.05;
+    }
+    90% {
+        scale: 1;
+    }
+}
