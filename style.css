@@ -219,7 +219,7 @@ header .nav-item:hover .nav-link {
 
 .left-achieve {
     border-radius: 15px;
-    width: 35%;
+
     margin-right: 50px;
     padding: 40px 30px;
     background: rgba(255, 255, 255, 0.25);
@@ -261,9 +261,39 @@ footer {
     border: 1px solid #fff;
 }
 
+.cd-top {
+    position: fixed;
+    display: block;
+    right: 30px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+    line-height: 50px;
+    background-color: #0cd60f;
+    color: #fff;
+    z-index: 999;
+    border-radius: 10px;
+}
+
+.cd-top:hover {
+    opacity: 1;
+}
+
 .top-footer {
     padding-bottom: 30px;
     border-bottom: 1px solid #888;
+}
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cd-top--fade-out {
+    opacity: 0.5;
 }
 
 @keyframes scalling {
@@ -275,5 +305,54 @@ footer {
     }
     90% {
         scale: 1;
+    }
+}
+
+/* Desktop first */
+/* xxl 1400px */
+@media screen and (max-width: 1400px) {
+    .heading {
+        width: 650px;
+    }
+}
+
+/* md 768px */
+/* xl - 1200px */
+@media screen and (max-width: 1200px) {
+    .carousel-item .carousel-content h1 {
+        font-size: 45px;
+    }
+}
+
+/* lg - 992px */
+@media screen and (max-width: 992px) {
+    .navbar-toggler {
+        background-color: #fff;
+        border: 1px solid white;
+    }
+}
+
+/* md - 768px */
+@media screen and (max-width: 768px) {
+    .feature {
+        margin: 40px 0;
+    }
+
+    .achievement {
+        padding: 20px 0 50px;
+    }
+
+    .right-achieve {
+        margin-top: 20px;
+    }
+    .carousel-item .carousel-content h1 {
+        margin-top: 15px;
+        font-size: 30px;
+    }
+    .carousel-content p {
+        font-size: 2vw;
+    }
+    .heading {
+        width: 100%;
     }
 }
